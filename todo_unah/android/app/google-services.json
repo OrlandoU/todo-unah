@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "784234076631",
+    "project_id": "todo-unah",
+    "storage_bucket": "todo-unah.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:784234076631:android:b8d38d426c765023d61392",
+        "android_client_info": {
+          "package_name": "com.example.todo_unah"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAqWv9N6Jv9KvlXQ4N4JeB0RUvII3kmzgs"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
