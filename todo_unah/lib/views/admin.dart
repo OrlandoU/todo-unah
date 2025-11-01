@@ -83,18 +83,21 @@ class AdminTodoPage extends StatelessWidget {
 
           if (todoId == null) {
             todoList.add(newTodo);
+            Utils.showSnackBar(
+              context: context,
+              title: "Tarea creada correctamente",
+            );
           } else {
             final indice = todoList.indexWhere(
               (todo) => todo['id'].toString() == todoId,
             );
-
+            Utils.showSnackBar(
+              context: context,
+              title: "Tarea editada correctamente",
+            );
             todoList[indice] = newTodo;
           }
 
-          Utils.showSnackBar(
-            context: context,
-            title: "Tarea creada correctamente",
-          );
 
           titleController.text = '';
           descriptionController.text = '';

@@ -8,7 +8,7 @@ class Input extends StatefulWidget{
   final Widget? suffixIcon;
   final bool escondible;
 
-  bool estaVisible = false;
+  bool estaVisible = true;
 
   Input({
     super.key,

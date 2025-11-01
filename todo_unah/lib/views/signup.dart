@@ -1,10 +1,7 @@
-import 'dart:math';
-
 import 'package:flutter/material.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'package:go_router/go_router.dart';
 import 'package:todo_unah/components/Input.dart';
-import 'package:todo_unah/extras/todos.dart';
 import 'package:todo_unah/extras/user.dart';
 import 'package:todo_unah/extras/utils.dart';
 
@@ -34,8 +31,6 @@ class _SignupPageState extends State<SignupPage> {
 
   @override
   Widget build(BuildContext context) {
-    final todoId = GoRouterState.of(context).pathParameters['id'];
-
     return Scaffold(
       appBar: AppBar(
         title: Text('Crear Cuenta'),
