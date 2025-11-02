@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:go_router/go_router.dart';
-import 'package:todo_unah/extras/user.dart';
 import 'package:todo_unah/views/admin.dart';
 import 'package:todo_unah/views/home.dart';
 import 'package:todo_unah/views/login.dart';
