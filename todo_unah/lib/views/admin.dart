@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:go_router/go_router.dart';
+import 'package:todo_unah/components/Input.dart';
 import 'package:todo_unah/extras/todos.dart';
 import 'package:todo_unah/extras/utils.dart';
 
@@ -33,30 +34,9 @@ class AdminTodoPage extends StatelessWidget {
         padding: EdgeInsetsGeometry.symmetric(vertical: 8, horizontal: 16),
         child: Column(
           children: [
-            TextField(
-              focusNode: titleFocus,
-              controller: titleController,
-              decoration: InputDecoration(
-                label: Text('Titulo'),
-                hint: Text('Eje. Crear opción de eliminar'),
-                border: OutlineInputBorder(
-                  borderRadius: BorderRadius.circular(12),
-                ),
-
-                prefixIcon: Icon(Icons.text_fields_rounded),
-              ),
-
-              maxLines: 1,
-              maxLength: 50,
-              obscureText: false,
-              keyboardType: TextInputType.visiblePassword,
-            ),
-            SizedBox(height: 16),
-            TextField(
-              controller: descriptionController,
-              maxLines: 4,
-              decoration: InputDecoration(label: Text('Descripción')),
-            ),
+            Input(label: 'Titulo', controller: titleController, focusNode: titleFocus, prefixIcon: Icon(Icons.text_fields_rounded), maxLines: 1,),
+            SizedBox(height: 8),
+            Input(label: 'Descripcion', controller: descriptionController, maxLines: 4,),
           ],
         ),
       ),

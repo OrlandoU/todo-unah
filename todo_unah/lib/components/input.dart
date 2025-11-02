@@ -7,6 +7,9 @@ class Input extends StatefulWidget{
   final TextInputType keyboardType;
   final Widget? suffixIcon;
   final bool escondible;
+  final int maxLines;
+  final FocusNode? focusNode;
+  final Widget? prefixIcon;
 
   bool estaVisible = true;
 
@@ -17,6 +20,9 @@ class Input extends StatefulWidget{
     this.escondible = false,
     this.keyboardType = TextInputType.text,
     this.suffixIcon,
+    this.maxLines = 1,
+    this.focusNode,
+    this.prefixIcon,
   });
 
   @override
@@ -28,10 +34,13 @@ class _InputState extends State<Input> {
   @override
   Widget build(BuildContext context) {
     return TextField(
+      focusNode: widget.focusNode,
+      maxLines: widget.maxLines,
       controller: widget.controller,
       obscureText: !widget.estaVisible,
       keyboardType: widget.keyboardType ,
       decoration: InputDecoration(
+        prefixIcon: widget.prefixIcon,
         label: Text(widget.label),
         enabledBorder: OutlineInputBorder(
           borderRadius: BorderRadius.circular(40),
